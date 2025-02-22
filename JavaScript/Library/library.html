@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <link rel="stylesheet" href="library.css" />
+  </head>
+  <body>
+    <header>Simple Library</header>
+    <div class="wrapper">
+      <div class="container">
+        <div class="book">
+          <p class="title"><b> Atomic Habits</b></p>
+          <p class="author">by: James Clear</p>
+          <br />
+          <p class="pages">Pages: 346</p>
+          <br />
+          <button class="read">Not Read</button> <br />
+          <button class="delete">
+            <img src="./assets/delete-icon.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <button class="addBook">Add Book</button>
+    <dialog class="addBookModal">
+      <form>
+        <h3>Add new Book</h3>
+        <label for="name">Book Name:</label> <br />
+        <input type="text" id="name" /> <br />
+        <label for="author">Author: </label> <br />
+        <input type="text" id="author" /> <br />
+        <label for="pages">Pages:</label> <br />
+        <input type="text" id="pages" /> <br />
+        <input type="submit" id="submitModal" name="Add Book" />
+        <button class="closeModal">
+          <img src="./assets/close-icon.svg" alt="" />
+        </button>
+      </form>
+    </dialog>
+    <script src="library.js"></script>
+  </body>
+</html>
