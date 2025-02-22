@@ -107,3 +107,9 @@ button.addBook {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+form input[type='text'] {
+  border-radius: 5%;
+  width: 95%;
+  height: 17px;
+}
