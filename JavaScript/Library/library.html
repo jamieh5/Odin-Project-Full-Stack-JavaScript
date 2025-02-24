@@ -25,15 +25,15 @@
     </div>
     <button class="addBook">Add Book</button>
     <dialog class="addBookModal">
-      <form>
+      <form action="#" method="get">
         <h3>Add new Book</h3>
         <br />
         <label for="name">Book Name:</label> <br />
-        <input type="text" id="name" /> <br />
+        <input type="text" id="name" name="book-name" /> <br />
         <label for="author">Author: </label> <br />
-        <input type="text" id="author" /> <br />
+        <input type="text" id="author" name="author" /> <br />
         <label for="pages">Pages:</label> <br />
-        <input type="text" id="pages" /> <br />
+        <input type="text" id="pages" name="pages" /> <br />
         <input type="submit" id="submitModal" name="Add Book" />
         <button class="closeModal">
           <img src="./assets/close-icon.svg" alt="" />

@@ -24,14 +24,24 @@ addBook.addEventListener('click', function () {
 
 const myLibrary = []
 
-function Book(name, author, pages, read) {
+function Book(name, author, pages) {
   this.name = name
   this.author = author
   this.pages = pages
-  this.read = read
 }
 
-const atomicHabits = new Book('Atomic Habits', 'James Clear', 346, 'not read')
+const submitBtn = document.querySelector('#submitModal')
+submitBtn.addEventListener('click', function (event) {
+  event.preventDefault()
+
+  const title = document.querySelector('#name').value
+  const author = document.querySelector('#author').value
+  const pages = document.querySelector('#pages').value
+
+  const newBook = new Book(title, author, pages)
+  myLibrary.push(newBook)
+  console.log(myLibrary)
+})
 
 function createCard(book) {
   const card = document.createElement('div')
