@@ -43,11 +43,16 @@ submitBtn.addEventListener('click', function (event) {
   console.log(myLibrary)
 })
 
-function createCard(book) {
+function addBookToLibrary() {
+  const bookContainer = document.querySelector('.container')
   const card = document.createElement('div')
-  const title = document.createElement('h3')
-  const author = document.createElement('p')
-  const pages = document.createElement('p')
-  const hasRead = document.createElement('button')
-  const deleteBtn = document.createElement('img')
+  card.classList.add('book')
+  bookContainer.append(card)
+
+  const bookTitle = document.createElement('p')
+  bookTitle.innerHTML = 'James Clear'
+  bookTitle.classList.add('title')
+  card.append(bookTitle)
 }
+
+addBookToLibrary()
