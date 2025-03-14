@@ -34,21 +34,25 @@ function addBookToLibrary(title, author, pages) {
   notRead.classList.add('read')
   card.append(notRead)
 
-  const br = document.createElement('br')
-  card.append(br)
-
-  const deleteBtn = document.createElement('button')
-  deleteBtn.classList.add('delete')
-  card.append(deleteBtn)
-
-  const deleteBtnImg = document.createElement('img')
-  deleteBtnImg.src = './assets/delete-icon.svg'
-  deleteBtn.append(deleteBtnImg)
+  let read = false
+  notRead.addEventListener('click', function () {
+    if (read == false) {
+      notRead.innerHTML = 'Read'
+      read = true
+    } else if (read == true) {
+      notRead.innerHTML = 'Not Read'
+      read = false
+    }
+  })
 }
 
 myLibrary.push(new Book('Atomic Habits', 'James Clear', '346'))
-myLibrary.push(new Book('Atomic Habits', 'James Clear', '346'))
-myLibrary.push(new Book('Atomic Habits', 'James Clear', '346'))
+myLibrary.push(new Book('surronded by idiots', 'thomas erikson', '249'))
+myLibrary.push(new Book('Why Nations Fail', 'James A. Robinson', '495'))
+myLibrary.push(new Book('The Mountain is you', 'Brianna West', '495'))
+myLibrary.push(new Book('Never Split the difference', 'Chris Voss', '223'))
+myLibrary.push(new Book('Unfuck Yourself', 'Gary John Bishop', '182'))
+myLibrary.push(new Book('Make your Bed', 'William H. McRAVEN', '122'))
 
 for (i = 0; i < myLibrary.length; i++) {
   addBookToLibrary(myLibrary[i].name, myLibrary[i].author, myLibrary[i].pages)

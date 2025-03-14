@@ -41,31 +41,15 @@ header {
 }
 
 button.read {
-  background-color: var(--not-read);
+  background-color: var(--primary-color);
+  color: white;
   width: 80%;
   height: 30px;
   border: none;
   border-radius: 3%;
-  font-weight: bold;
   margin: 20px 0px;
 }
 
-button.delete {
-  float: right;
-  position: relative;
-  top: 15px;
-  left: 5px;
-  height: 30px;
-  width: 30px;
-  background: none;
-  border: none;
-}
-
-button.delete img,
-button.closeModal img {
-  max-width: 100%;
-  height: auto;
-}
 .title {
   font-weight: bold;
 }
