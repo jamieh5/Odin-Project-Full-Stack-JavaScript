@@ -1,27 +1,5 @@
 // Task: https://www.theodinproject.com/lessons/node-path-javascript-library
 
-const modal = document.querySelector('.addBookModal')
-const addBook = document.querySelector('.addBook')
-const read = document.querySelector('.read')
-
-let bookRead = false
-
-read.addEventListener('click', function () {
-  if (bookRead == false) {
-    read.style.background = '#a7c957'
-    read.innerHTML = 'Read'
-    bookRead = true
-  } else if (bookRead == true) {
-    bookRead = false
-    read.style.background = '#bc4749'
-    read.innerHTML = 'Not Read'
-  }
-})
-
-addBook.addEventListener('click', function () {
-  modal.open = true
-})
-
 const myLibrary = []
 
 function Book(name, author, pages) {
@@ -29,19 +7,6 @@ function Book(name, author, pages) {
   this.author = author
   this.pages = pages
 }
-
-const submitBtn = document.querySelector('#submitModal')
-submitBtn.addEventListener('click', function (event) {
-  event.preventDefault()
-
-  const title = document.querySelector('#name').value
-  const author = document.querySelector('#author').value
-  const pages = document.querySelector('#pages').value
-
-  const newBook = new Book(title, author, pages)
-  myLibrary.push(newBook)
-  console.log(myLibrary)
-})
 
 function addBookToLibrary(title, author, pages) {
   const bookContainer = document.querySelector('.container')
@@ -81,4 +46,10 @@ function addBookToLibrary(title, author, pages) {
   deleteBtn.append(deleteBtnImg)
 }
 
-addBookToLibrary('Atomic Habits', 'James Clear', '342')
+myLibrary.push(new Book('Atomic Habits', 'James Clear', '346'))
+myLibrary.push(new Book('Atomic Habits', 'James Clear', '346'))
+myLibrary.push(new Book('Atomic Habits', 'James Clear', '346'))
+
+for (i = 0; i < myLibrary.length; i++) {
+  addBookToLibrary(myLibrary[i].name, myLibrary[i].author, myLibrary[i].pages)
+}
