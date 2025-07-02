@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('fonts/roboto.ttf') format('truetype');
+  font-style: normal;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
