@@ -1,15 +1,48 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 @font-face {
   font-family: Roboto;
   src: url('fonts/roboto.ttf') format('truetype');
   font-style: normal;
 }
-
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+html {
+  --shadow: 2px 3px 2px var(--light-gray);
+}
 .container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #1992d4;
+  box-shadow: var(--shadow);
+  color: white;
+}
+
+.main {
+  width: 75%;
   display: grid;
-  grid-template-rows: 20% 80%;
+  grid-template-columns: 40% 40% 20%;
+  grid-template-rows: 15% 85%;
+}
+
+.top {
+  grid-column: 1 / 4;
+  grid-row: 1 / 1;
+}
+
+.projects {
+  grid-column: 1 / 3;
+  grid-row: 2 / 2;
+}
+
+.side {
+  grid-column: 3 / 4;
+  grid-row: 2 / 2;
 }
