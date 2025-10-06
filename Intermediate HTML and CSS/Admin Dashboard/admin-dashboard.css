@@ -61,12 +61,30 @@ html {
   width: 85%;
   display: grid;
   grid-template-columns: 40% 40% 20%;
-  grid-template-rows: 15% 1fr 1fr 1fr;
+  grid-template-rows: 12% 1fr 1fr 1fr;
 }
 
-.top {
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  box-shadow: 2px 2px 5px gray;
   grid-column: 1 / 4;
   grid-row: 1 / 1;
+}
+
+.top-icons {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.search input {
+  border-radius: 5px;
+  border: 1px rgb(56, 53, 53) solid;
+  width: 50%;
+  height: 25px;
 }
 
 .projects {
@@ -74,7 +92,17 @@ html {
   grid-row: 2 / 2;
 }
 
+.announcements {
+  grid-column: 3 / 4;
+  grid-row: 2 / 5;
+}
+
+.trending {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+
 .side {
   grid-column: 3 / 4;
-  grid-row: 2 / 2;
+  grid-row: 2 / 5;
 }
