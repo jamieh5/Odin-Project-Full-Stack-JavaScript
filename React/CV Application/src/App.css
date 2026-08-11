@@ -6,3 +6,17 @@
 body {
   background-color: #080c0d;
 }
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#wrapper > .container {
+  background-color: #203536;
+  color: #effffc;
+  width: 30%;
+  height: 500px;
+  border-radius: 5%;
+  margin: 50px;
+}
