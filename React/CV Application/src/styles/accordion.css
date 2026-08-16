@@ -5,3 +5,26 @@
 .active {
   visibility: visible;
 }
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  border: 1px solid red;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item > * {
+  padding: 10px;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  float: right;
+  transform: rotate(90deg);
+}
